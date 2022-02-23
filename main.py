@@ -10,7 +10,7 @@ height = dimensions[1]
 
 screen = pygame.display.set_mode(dimensions)
 clock = pygame.time.Clock()
-fps = 75
+fps = 80
 
 screen.fill((0,0,0))
 
@@ -45,7 +45,6 @@ class logo():
         y = self.position[1]
         coords = (x, y)
         screen.blit(self.img, coords)
-        pygame.display.update()
 
 class box():
     def __init__(self, position, velocity, color):
@@ -59,9 +58,7 @@ class box():
     def draw(self):
         x = self.position[0]
         y = self.position[1]
-        coords = (x, y)
         pygame.draw.rect(screen, self.color, pygame.Rect(x, y, 250, int((250/1024)*590)))
-        pygame.display.update()
 
     def check_collision(self):
         xpos = self.position[0]
@@ -100,3 +97,4 @@ while run:
 
     box.draw()
     dvd_logo.draw()
+    pygame.display.update()
