@@ -12,7 +12,7 @@ height = dimensions[1]
 
 screen = pygame.display.set_mode(dimensions)
 clock = pygame.time.Clock()
-fps = 80
+fps = 90
 
 screen.fill((0,0,0))
 
