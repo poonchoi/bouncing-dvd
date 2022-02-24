@@ -1,10 +1,12 @@
 import pygame
 import random
+import ctypes
 
 # pygame initialize
 pygame.init()
 
-dimensions = (1920,1080)
+user32 = ctypes.windll.user32
+dimensions = (user32.GetSystemMetrics(0), user32.GetSystemMetrics(1))
 width = dimensions[0]
 height = dimensions[1]
 
