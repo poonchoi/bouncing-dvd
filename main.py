@@ -81,7 +81,6 @@ class box():
 
 dvd_logo = logo([width/2, height/2],[2,-2])
 box = box([width/2, height/2],[2,-2], (255,100,43))
-
 run = True
 
 while run:
@@ -100,3 +99,5 @@ while run:
     box.draw()
     dvd_logo.draw()
     pygame.display.update()
+
+pygame.quit()
