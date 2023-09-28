@@ -1,15 +1,10 @@
 import pygame
 import random
-import ctypes
 
 # pygame initialize
 pygame.init()
 
-user32 = ctypes.windll.user32
-dimensions = (user32.GetSystemMetrics(0), user32.GetSystemMetrics(1))
-width = dimensions[0]
-height = dimensions[1]
-
+dimensions = (height, width) = (1920, 1080)
 screen = pygame.display.set_mode(dimensions)
 clock = pygame.time.Clock()
 fps = 90
